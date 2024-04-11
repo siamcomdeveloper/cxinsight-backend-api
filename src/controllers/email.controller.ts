@@ -869,10 +869,10 @@ function sendInviteHtml(req: Request, resultData: any, base64data: any){
                             <tr><td colspan="5" align="left" valign="top" style="color: rgb(102, 102, 102); font-size: 13px; padding: 10px 20px;"><p>${emailMessageReplace}</p></td></tr>
                             <tr><td colspan="5">&nbsp;</td></tr>
                             <tr><td colspan="2">&nbsp;</td><td colspan="1">
-                                    <a style="text-decoration: none;" href="${process.env.DOMAIN_NAME_FRONTEND}/client/${req.headers['x-site']}/sv?tk=${base64data}" target="_blank">
+                                    <a style="text-decoration: none;" href="${process.env.DOMAIN_NAME_FRONTEND}/${req.headers['x-site']}/sv?tk=${base64data}" target="_blank">
                                         <table cellpadding="0" cellspacing="0" style="text-align:center;margin: 0 auto;width: 30%;">
                                             <tbody>
-                                                <tr><td style="text-align: center; background: ${resultData.email_color_theme ? resultData.email_color_theme : 'dodgerblue'}; border-radius: 4px; padding: 10px 18px;"><a style="font-size: 14px; color: rgb(255, 255, 255); text-decoration: none; letter-spacing: 1px; text-shadow: rgba(0, 0, 0, 0.8) -1px -1px 1px;" href="${process.env.DOMAIN_NAME_FRONTEND}/client/${req.headers['x-site']}/sv?tk=${base64data}" target="_blank">Begin Survey</a></td></tr>
+                                                <tr><td style="text-align: center; background: ${resultData.email_color_theme ? resultData.email_color_theme : 'dodgerblue'}; border-radius: 4px; padding: 10px 18px;"><a style="font-size: 14px; color: rgb(255, 255, 255); text-decoration: none; letter-spacing: 1px; text-shadow: rgba(0, 0, 0, 0.8) -1px -1px 1px;" href="${process.env.DOMAIN_NAME_FRONTEND}/${req.headers['x-site']}/sv?tk=${base64data}" target="_blank">Begin Survey</a></td></tr>
                                             </tbody>
                                         </table>
                                     </a>
