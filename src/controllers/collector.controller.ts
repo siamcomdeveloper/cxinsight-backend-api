@@ -73,7 +73,8 @@ export async function createCollector(req: Request, res: Response){
                             let buff = Buffer.from(jwtToken)
                             let base64data = buff.toString('base64');
 
-                            const urlToken = `${process.env.DOMAIN_NAME_FRONTEND}/client/${req.headers['x-site']}/sv?tk=${base64data}`;
+                            // const urlToken = `${process.env.DOMAIN_NAME_FRONTEND}/client/${req.headers['x-site']}/sv?tk=${base64data}`;
+                            const urlToken = `${process.env.DOMAIN_NAME_FRONTEND}/${req.headers['x-site']}/sv?tk=${base64data}`;
                             
                             let columnsValues = '';
                             request.input(`link`, sql.VarChar , urlToken);
