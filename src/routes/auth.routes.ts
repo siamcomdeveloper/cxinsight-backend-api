@@ -184,7 +184,7 @@ router.post('/register', async (req, res, next) => {
                                                         subject: "CX InSight CXM Platform Register Confirmation Email", //subject
                                                         html: `
                                                         <p>You request to confirm your account.</p>
-                                                        <p>Click this <a href="${process.env.DOMAIN_NAME_FRONTEND}/platform/${req.headers['x-site']}/confirm/${token}">link</a> to confirm your email.</p>`  //email body
+                                                        <p>Click this <a href="https://cxinsight-frontend.onrender.com/cxm/platform/${req.headers['x-site']}/confirm/${token}">link</a> to confirm your email.</p>`  //email body
                                                     }
                                                     
                                                     const smtp = {
@@ -330,7 +330,7 @@ router.post('/reset', async (req, res, next) => {
                                 subject: "You requested a new CX InSight CXM Platform password",
                                 html: `
                                 <p>You request to reset your CX InSight CXM Platform for the username ${email.toLowerCase()}.</p>
-                                <p><a href="${process.env.DOMAIN_NAME_FRONTEND}/platform/${req.headers['x-site']}/resetpassword/${token}">Click Here</a> to create your new password.</p>`  //email body
+                                <p><a href="https://cxinsight-frontend.onrender.com/cxm/platform/${req.headers['x-site']}/resetpassword/${token}">Click Here</a> to create your new password.</p>`  //email body
                             }
 
                             const smtp = {
